@@ -19,6 +19,7 @@ img {
 
 .card {
   border: none;
+  background-color: #131313;
 }
 
 .card-header {
