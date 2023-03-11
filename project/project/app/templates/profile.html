@@ -12,19 +12,21 @@
                     <h5 class="card-title font-weight-bold">{{ User.first_name }} {{ User.last_name }}</h5>
                     <h6 class="card-title font-weight-bold">@{{ User.username }}</h6>
 
+                    <br></br>
+                    <br></br>
 
-                    <p class="card-text">Tony</p>
-                    <p class="card-text">Tony</p>
                     <h6 class="card-title font-weight-bold">
-                        100 Followers
-                        100 Following
+                        {{ UserProfile.followers.count }} Seguidores
+                        {{ UserProfile.following.count }} Siguiendo
                     </h6>
+
+                    <button href="#" id="addATweetLeft" type="button"
+                        style="border-radius: 30px; font-size: 1.1rem; border-color: #727272; color: #999999;"
+                        class="btn btn-lg btn-block mt-4 btn-outline-dark">Editar mi perfil</button>
                 </div>
 
             </div>
-            <a href="#" id="addATweetLeft" type="button"
-                style="border-radius: 30px; font-size: 1.1rem; font-weight:bold;"
-                class="btn btn-lg btn-block mt-4 text-white ">Editar mi perfil</a>
+            
         </div>
     </div>
     <!-- End Barra Izquierda -->
