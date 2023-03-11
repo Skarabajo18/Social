@@ -10,11 +10,11 @@
 `python -m virtualenv venv`
 
 - ##### En Windows:
-```cd venv/Scripts
-activate```
+`cd venv/Scripts`
+`activate`
 
 - ##### En Linux:
-```source venv/Scripts/activate.sh```
+`source venv/Scripts/activate.sh`
 
 
 ### 3. Instalar requerimientos en el entorno virtual
@@ -22,6 +22,7 @@ activate```
 `python -m pip install -r requirements.txt`
 
 ### 4. Inicializar servidor django
-```
-cd <ruta proyecto>
-python manage.py runserver```
+- `cd <ruta proyecto>`
+- `python manage.py runserver`
+
+
