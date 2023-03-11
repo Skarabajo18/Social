@@ -8,15 +8,19 @@ from django.contrib.auth.decorators import login_required
 from .forms import (SignUpForm)
 from .models import (UserAccount,
 		             UserRelationship,
-			         UserProfile
-		     )
+			         UserProfile)
 
 def login(request):
+    
     return render(request, 'login.html')
 
 @login_required
 def home(request):
-    return render(request, 'layout.html')
+    x = request
+    Users = UserAccount.objects.all()
+    UserProfiles = UserProfile.objects.all()
+    context = {'Users': Users, 'UserProfiles': UserProfiles}
+    return render(request=request, template_name='layout.html', context=context)
 
 def signup(request):
 
@@ -41,11 +45,19 @@ def signup(request):
 	return render(request, 'signup.html', context)
 
 @login_required
-def user_profile(request, username=None):
-	User_ = UserAccount.objects.get(username=request.user.username) # request.user.username
+def user_profile(request):
+	User_ = UserAccount.objects.get(username=request.user.username)
 	UserProfile_ = UserProfile.objects.get(User_id=request.user.id)
 	print(UserProfile_.image.url)
 	context = {'User': User_,
                'UserProfile': UserProfile_}
 	
 	return render(request, 'profile.html', context)
+
+def profile_user(request, username=None):
+	User_ = UserAccount.objects.get(username=username)
+	UserProfile_ = UserProfile.objects.get(User=User_)
+	print(UserProfile_.image.url)
+	context = {'User': User_,
+               'UserProfile': UserProfile_}
+	return render(request, 'profile_user.html', context)

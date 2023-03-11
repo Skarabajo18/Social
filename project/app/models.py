@@ -32,7 +32,10 @@ class UserProfile(models.Model):
 	User = models.OneToOneField(UserAccount,
                                 on_delete=models.CASCADE)
         
-	image = models.ImageField(default='media/profile/user.png')
+	image = models.ImageField(default='media/profile/user.png',
+                              upload_to='media/profile/',
+                              null=True,
+                              blank=True)
 	
 	def __str__(self):
 		return f'Perfil de {self.User.username}'
@@ -67,3 +70,9 @@ class UserRelationship(models.Model):
             models.Index(fields=['from_user', 'to_user',]),
         ]
 
+class Post(models.Model):
+      User = models.OneToOneField(UserAccount,
+                                  on_delete=models.CASCADE)
+      text = models.TextField(max_length=1000, null=True, blank=True)
+
+      image = models.ImageField(upload_to='media/post', null=True, blank=True)

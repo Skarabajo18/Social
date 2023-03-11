@@ -1,4 +1,5 @@
 {% load static %}
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,16 +67,14 @@
                   <a class = 'nav-link active' aria-current = 'page' href = '/login'>Login</a>
                 </li>
                 <li class = 'nav-item'>
-                  <a class = 'nav-link active' aria-current = 'page' href = '/register'>Registro</a>
+                  <a class = 'nav-link active' aria-current = 'page' href = '/signup'>Registro</a>
                 </li>
                 <li class = 'nav-item'>
                   <a class = 'nav-link active' aria-current = 'page' href = '#'>Contact</a>
                 </li>
+
                 <li class = 'nav-item'>
-                    <a class = 'nav-link active' aria-current = 'page' href="" class="btn text-white my-2 my-sm-0" type="submit">Inicio</a>
-                </li>
-                <li class = 'nav-item'>
-                    <a class = 'nav-link active' aria-current = 'page' href="" class="btn text-white my-2 my-sm-0" type="submit">Logout</a>
+                    <a class = 'nav-link active' aria-current = 'page' href="/logout" class="btn text-white my-2 my-sm-0" type="submit">Logout</a>
                 </li>
               </ul>
             </div>
@@ -239,12 +238,17 @@
                     Who to Follow
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href=""
-                            style="text-decoration: none;color: #657787;">@playboicarti</a></li>
-                    <li class="list-group-item"><a href=""
-                            style="text-decoration: none;color: #657787;">@LILUZIVERT</a></li>
-                    <li class="list-group-item"><a href=""
-                            style="text-decoration: none;color: #657787;">@NARUTO_kousiki</a></li>
+
+                    <p>{{ request.user }}</p>
+
+                    {% for User in Users %}
+                        {% if User.username != request.user.username %}
+                            {% if User not in request %}
+                                <li class="list-group-item"
+                                    style="text-decoration: none;color: #657787;">@{{User.username}}</li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
