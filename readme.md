@@ -3,8 +3,9 @@
     Red social es lo que está pasando y de lo que las personas están hablando en este momento.
     Estamos al servicio de la conversación pública.
     Por eso nos importa que las personas tengan un espacio libre y seguro para conversar.
-    Conversaciones saludables → Seguridad y privacidad → Integridad cívica →
 </sub>
+>Conversaciones saludables → Seguridad y privacidad → Integridad cívica →
+
 
 ### 1. Instalar requerimiento inicial
 `python -m pip install virtualenv`
