@@ -1,6 +1,11 @@
 # Red social
 <sub>
-    version 0.0.6
+    Red social es lo que está pasando y de lo que las personas están hablando en este momento.
+
+    Estamos al servicio de la conversación pública.
+    Por eso nos importa que las personas tengan un espacio libre y seguro para conversar.
+
+    Conversaciones saludables → Seguridad y privacidad → Integridad cívica →
 </sub>
 
 ### 1. Instalar requerimiento inicial
@@ -14,7 +19,7 @@
     - `activate`
 
 - ##### En Linux:
-`source venv/Scripts/activate.sh`
+    - `source venv/Scripts/activate.sh`
 
 
 ### 3. Instalar requerimientos en el entorno virtual
