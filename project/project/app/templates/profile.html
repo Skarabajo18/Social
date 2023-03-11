@@ -1,4 +1,4 @@
-{% extends 'twitter/layout.html' %}
+{% extends 'layout.html' %}
 {% block content %}
 <div id="main" class="container-fluid d-flex">
     <!-- Barra Izquierda -->
@@ -6,13 +6,14 @@
         <div class="">
             <div class="card " style="width: 18rem; text-align:center;border-radius: 20px;">
                 <img class="card-img-top rounded-circle"
-                    style="width:60%; position: relative;left: 62px;padding-top: 20px;" src="../../static/img/tony.jpg"
+                    style="width:60%; position: relative;left: 62px;padding-top: 20px;" src="{{ UserProfile.image.url }}"
                     alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Tony</h5>
-                    <h6 class="card-title font-weight-bold">@Tony</h6>
+                    <h5 class="card-title font-weight-bold">{{ User.first_name }} {{ User.last_name }}</h5>
+                    <h6 class="card-title font-weight-bold">@{{ User.username }}</h6>
 
 
+                    <p class="card-text">Tony</p>
                     <p class="card-text">Tony</p>
                     <h6 class="card-title font-weight-bold">
                         100 Followers

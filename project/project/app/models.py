@@ -31,7 +31,8 @@ class UserProfile(models.Model):
 
 	User = models.OneToOneField(UserAccount,
                                 on_delete=models.CASCADE)
-    
+        
+	image = models.ImageField(default='media/profile/user.png')
 	
 	def __str__(self):
 		return f'Perfil de {self.User.username}'
