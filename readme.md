@@ -5,7 +5,9 @@
     Por eso nos importa que las personas tengan un espacio libre y seguro para conversar.
 </sub>
 
-Conversaciones saludables → Seguridad y privacidad → Integridad cívica →
+
+
+#### Conversaciones saludables → Seguridad y privacidad → Integridad cívica →
 
 
 ### 1. Instalar requerimiento inicial
