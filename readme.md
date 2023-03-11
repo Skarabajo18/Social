@@ -1,2 +1,2 @@
-## Red social
+### Red social
 `Social`
