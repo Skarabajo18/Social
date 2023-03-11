@@ -10,8 +10,8 @@
 `python -m virtualenv venv`
 
 - ##### En Windows:
-`cd venv/Scripts`
-`activate`
+    - `cd venv/Scripts`
+    - `activate`
 
 - ##### En Linux:
 `source venv/Scripts/activate.sh`
