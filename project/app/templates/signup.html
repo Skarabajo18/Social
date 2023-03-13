@@ -1,0 +1,35 @@
+{% load static %}
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<body class="login-page" style="background-color: #121212">
+    <div class="twitter-login-box">
+        <form class="form" action="" method="POST">
+            <header>
+                <h2 class="h2 text-white">Registrarse</h2>
+            </header>
+            
+            
+            {% csrf_token %}
+
+            {{ sign_up_form }}
+            <br>
+            <br>
+            <form class="d-flex px-1">
+			    <button class="btn btn-primary btn-success btn-" type="submit"
+                        id="btn-submit" href="#"
+                        style="justify-content: flex-start;">Registrarse</button>
+
+                <a href="#" style="justify-content: flex-end">¿Ya tienes una cuenta? Inicia sesión</a>
+            </form>
+
+        </form>
+
+
+        
+    </div>
+
+    {% endblock content %}
