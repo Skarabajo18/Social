@@ -1,14 +1,23 @@
 .container-login{
-  max-width: 100vh;
-  margin: 0 auto;
-  margin-top: 10px; 
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-radius: 6px;
+  display: block;
+  padding: 55px;
+  color: #6a6a6a;
+  
+    
+}
+.slider{
+  border-radius: 6px;
+  display: block;
+  background-color: #201f1f;
+
+  color: #6a6a6a;
+  text-shadow: none;
+  -webkit-box-shadow: 9px 8px 66px -21px rgba(181,40,181,1);
+  -moz-box-shadow: 9px 8px 66px -21px rgba(181,40,181,1);
+  box-shadow: 9px 8px 66px -21px rgba(181,40,181,1);
 }
 .container-login, input[type="text"], input[type="password"] {
   box-sizing: border-box;

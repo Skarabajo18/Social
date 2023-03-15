@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name = 'viewport' content = 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
     <meta http-equiv = 'X-UA-Compatible' content = 'ie=edge'>
-    <title>What's happening?</title>
+    <title>Que estas pensando?</title>
     
     
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
@@ -81,12 +81,12 @@
                     <li class = 'nav-item'>
                     <a class = 'nav-link active' aria-current = 'page' href = '/signup'>Registro</a>
                     </li>
-                    <li class = 'nav-item'>
+                    <!-- <li class = 'nav-item'>
                     <a class = 'nav-link active' aria-current = 'page' href = '#'>Contact</a>
-                    </li>
+                    </li> -->
 
                     <li class = 'nav-item'>
-                        <a class = 'nav-link active' aria-current = 'page' href="/logout" class="btn text-white my-2 my-sm-0" type="submit">Logout</a>
+                        <a class = 'nav-link active' aria-current = 'page' href="/logout" class="btn text-white my-2 my-sm-0" type="submit">Cerrar</a>
                     </li>
                 </ul>
                 </div>
@@ -145,7 +145,7 @@
                         <!-- Formulario -->
                         <form class="col pr-0  ">
                             <textarea class="form-control w-100" id="contentsBox"
-                                placeholder="What's happening?" style="background-color: rgb(123, 58, 58)"></textarea>
+                                placeholder="What's happening?" style="background-color: rgb(0, 0, 0)"></textarea>
                             <div class="container d-flex" style="padding: 1rem 0 0 0;" >
                                 <div id="leftBtn">
                                     <div id="charBadge" class="badge badge-pill badge-primary ml-2"
@@ -184,7 +184,7 @@
                         <div class="tweet-info-counts">
 
                             <div class="comments">
-                                <button style="background: white; border: none;">
+                                <button style="background: rgba(255, 255, 255, 0); border: none;">
                                     <svg class="feather feather-message-circle sc-dnqmqq jxshSx"
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -198,7 +198,7 @@
                             </div>
 
                             <div class="retweets">
-                                <button style="background: white; border: none;">
+                                <button style="background: rgba(255, 255, 255, 0); border: none;">
                                     <svg class="feather feather-repeat sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg"
                                         width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -212,7 +212,7 @@
                             </div>
 
                             <div class="likes">
-                                <button style="background: white; border: none;">
+                                <button style="background: rgba(255, 255, 255, 0); border: none;">
                                     <svg class="feather feather-heart sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg"
                                         width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -226,7 +226,7 @@
 
                             <!-- DELETE -->
                             <div class="trash">
-                                <a href="#" style="background: white; border: none;">
+                                <a href="#" style="background: rgba(255, 255, 255, 0); border: none;">
                                     <i class="fa fa-trash-o" style="color:#657786; font-size: 20px" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -245,19 +245,17 @@
 
             <!-- Barra Derecha -->
             <div class="sidebar m-5 d-none d-xl-block">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; background-color: rgb(48, 48, 48);">
                     <div class="card-header">
-                        Who to Follow
+                        Seguidores
                     </div>
                     <ul class="list-group list-group-flush">
-
-                        <p>{{ request.user }}</p>
-
+                        <!-- <p>{{ request.user }}</p> -->
                         {% for User in Users %}
                             {% if User.username != request.user.username %}
                                 {% if User not in request %}
                                     <li class="list-group-item"
-                                        style="text-decoration: none;color: #657787;">@{{User.username}}</li>
+                                        style="background-color: #252525; text-decoration: none;color: #657787;">@{{User.username}}</li>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
