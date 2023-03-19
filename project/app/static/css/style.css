@@ -14,18 +14,7 @@ img {
   margin-right: 15px;
 }
 
-.card {
-  border: none;
-  background-color: #000000;
-}
 
-.card-header {
-  background-color: #5f1eeb/*#E0245E*/;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  border: none;
-}
 
 #main {
   justify-content: center;
@@ -94,8 +83,18 @@ img {
 }
 
 .tweet-info-counts div svg {
-  color: #657786;
+  color: #822b8c;
   margin-right: 10px;
+
+}
+
+.sidebar{
+  width: 100%;
+  background-color: #0000004b; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 40px;
+
 }
 
 @media screen and (max-width:370px) {
@@ -469,4 +468,38 @@ color: white !important;
 	height:100%;
 	position:fixed;
 	background:rgba(71, 69, 69, 0);
+}
+
+.button-slider {
+  background: none;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.button-slider:hover {
+  background: rgba(170, 170, 170, 0.062);
+  transition: 0.5s;
+}
+
+.button-slider svg {
+  color: #fff;
+}
+
+/*navbar phone*/
+@media (max-width: 768px) {
+  .navbar-item {
+    display: block;
+  }
+}
+@media (max-width: 375px) {
+  .card-body-phone v{
+    display: block;
+  }
+}
+
+@media (min-width: 990px) {
+  .card-body-phone {
+    display: none;
+  }
 }
